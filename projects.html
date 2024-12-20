@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <title>Archi</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="overlay-main"></div>
+
+            <div class="image-1">
+                <img src="a.jpg" alt="Slider Image 1" class="slider-image active">
+            </div>
+            <div class="container">
+                <div class="header-hero">
+                    <div class="header-box container">
+                        <div class="logo-box">
+                            <img src="archi-logo.svg" alt="">
+                        </div>
+                        <div class="menus">
+                            <ul class="menu-box">
+                                <li class="menu-item"><a href="index.html">HOME</a></li>
+                                <li class="menu-item"><a href="about.html">ABOUT US</a></li>
+                                <li class="menu-item"><a href="services.html">SERVICES</a></li>
+                                <li class="menu-item"><a href="projects.html">PROJECTS</a></li>
+                                <li class="menu-item"><a href="prices.html">PRICES</a></li>
+                                <li class="menu-item"><a href="contact.html">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                        <div class="burger-menu">
+                            <div class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-container">
+                        <div class="hero-text container">
+                            <p class="animate-text">
+                                HOME / PROJECTS
+                            </p>
+                            <h1 class="animate-text">
+                                PROJECTS
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <button class="close-btn">×</button>
+            <div class="menu-title">ARCHI</div>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li>
+                    <a href="">
+                        PROJECTS
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        PAGES
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        CONTACT
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <section class="projects-section">
+        <div class="section-header">
+            <div class="header-left">
+                <p class="category">/ OUR WORKS</p>
+                <h2 class="title">LATEST PROJECTS</h2>
+            </div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex.
+            </p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="residential">RESIDENTIAL</button>
+            <button class="filter-btn" data-filter="corporate">CORPORATE</button>
+            <button class="filter-btn" data-filter="restaurant">RESTAURANT</button>
+            <button class="filter-btn" data-filter="commercial">COMMERCIAL</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-item" data-category="residential">
+                <img src="58.jpg" alt="Residential Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Modern Bedroom Design</h3>
+                    <p class="project-category">Residential</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="corporate">
+                <img src="58.jpg" alt="Corporate Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Office Space</h3>
+                    <p class="project-category">Corporate</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="restaurant">
+                <img src="58.jpg" alt="Restaurant Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Modern Restaurant</h3>
+                    <p class="project-category">Restaurant</p>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="restaurant">
+                <img src="58.jpg" alt="Restaurant Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Modern Restaurant</h3>
+                    <p class="project-category">Restaurant</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="restaurant">
+                <img src="58.jpg" alt="Restaurant Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Modern Restaurant</h3>
+                    <p class="project-category">Restaurant</p>
+                </div>
+            </div>
+            <div class="project-item" data-category="restaurant">
+                <img src="58.jpg" alt="Restaurant Project" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Modern Restaurant</h3>
+                    <p class="project-category">Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <h2 class="footer-title">ARCHI</h2>
+            <p class="footer-description">
+                One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World
+                of Grammar.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OTHER PAGES</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Project</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Term Of Service</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Credits</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>LATEST PROJECTS</h3>
+                <div class="projects-grid">
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 1">
+                    </a>
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 2">
+                    </a>
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 3">
+                    </a>
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 4">
+                    </a>
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 5">
+                    </a>
+                    <a href="#" class="project-item">
+                        <img src="resim-urlunuz.jpg" alt="Interior Project 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Interior Design Template Kit by Jegtheme</p>
+            <p>Copyright © 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>
