@@ -66,14 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(target);
 });
 
-window.addEventListener('scroll', function() {
-    var element = document.getElementById('service-main-block');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const welcomeText = document.getElementById("welcome-text");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    welcomeText.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.5, 
+        }
+    );
+
+    observer.observe(welcomeText);
 });
 
 
@@ -94,30 +103,6 @@ window.addEventListener('scroll', function() {
 
 
 // work text animation
-
-
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('work-text');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
-
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
-});
-
-
-// contact-form footer animation
-
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('contact-form');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
-
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
-});
 
 
 // why us animation

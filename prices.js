@@ -47,63 +47,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // contact-form footer animation
 
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('contact-form');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contact-form");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                contactForm.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(contactForm);
 });
 
 
 //prices animation
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const pricingHeader = document.querySelector(".pricing-header");
 
-    const onScroll = () => {
-        const rect = pricingHeader.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            pricingHeader.classList.add("scroll-in-view");
-            window.removeEventListener("scroll", onScroll); 
-        }
-    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                pricingHeader.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
 
-    window.addEventListener("scroll", onScroll);
+    observer.observe(pricingHeader);
 });
 
 
 //how we work animation
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector(".image-container");
 
-    const onScroll = () => {
-        const rect = imageContainer.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            imageContainer.classList.add("scroll-in-view");
-            window.removeEventListener("scroll", onScroll); 
-        }
-    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                imageContainer.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
 
-    window.addEventListener("scroll", onScroll);
+    observer.observe(imageContainer);
 });
+
 
 
 //faq animation
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const faqImage = document.querySelector(".faq-image");
 
-    const onScroll = () => {
-        const rect = faqImage.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            faqImage.classList.add("scroll-in-view");
-            window.removeEventListener("scroll", onScroll);
-        }
-    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                faqImage.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
 
-    window.addEventListener("scroll", onScroll);
+    observer.observe(faqImage);
 });

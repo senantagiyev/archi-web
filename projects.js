@@ -56,12 +56,17 @@ function animateValue(id, start, end, duration) {
 
 //projects
 
-window.addEventListener('scroll', function () {
-    var element = document.querySelector('.section-header'); 
-    var elementPosition = element.getBoundingClientRect().top; 
-    var screenPosition = window.innerHeight; 
+document.addEventListener("DOMContentLoaded", () => {
+    const sectionHeader = document.querySelector(".section-header");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view'); 
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                sectionHeader.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(sectionHeader);
 });
+

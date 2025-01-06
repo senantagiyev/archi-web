@@ -23,15 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // detail
 
-window.addEventListener('scroll', function () {
-    var element = document.querySelector('.project-img');
-    var elementPosition = element.getBoundingClientRect().top; 
-    var screenPosition = window.innerHeight; 
+document.addEventListener("DOMContentLoaded", () => {
+    const projectImg = document.querySelector(".project-img");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view'); 
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                projectImg.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(projectImg);
 });
+
 
 
 // description

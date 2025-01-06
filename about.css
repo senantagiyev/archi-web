@@ -114,6 +114,7 @@ body{
     width: 100%;
     max-width: 1200px;
     text-align: center;
+
 }
 
 .hero-text h1 {
@@ -293,7 +294,7 @@ body{
 @keyframes slideInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(100%); 
     }
     100% {
         opacity: 1;
@@ -303,13 +304,12 @@ body{
 
 .welcome-text {
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden; 
 }
 
-.welcome-text.animate {
-    animation: slideInFromRight 1.5s ease-out;
-    animation-fill-mode: forwards; 
+.welcome-text.show {
+    animation: slideInFromRight 0.8s ease-out forwards; 
+    visibility: visible; 
 }
 
 

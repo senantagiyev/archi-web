@@ -80,26 +80,33 @@ window.addEventListener('scroll', function () {
 // work text animation
 
 
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('work-text');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const workText = document.getElementById("work-text");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                workText.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(workText);
 });
-
 
 // contact-form footer animation
 
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('contact-form');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contact-form");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                contactForm.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(contactForm);
 });
 

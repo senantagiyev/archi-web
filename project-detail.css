@@ -551,16 +551,27 @@ body{
     }
 }
 
-.project-img {
-    transform: translateX(100%); 
-    opacity: 0; 
-    transition: transform 1.4s ease, opacity 0.5s ease; 
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.project-img.scroll-in-view {
-    transform: translateX(0); 
-    opacity: 1; 
+.project-img {
+    opacity: 0;
+    visibility: hidden;
 }
+
+.project-img.show {
+    animation: slideInFromRight 0.8s ease-out forwards;
+    visibility: visible;
+}
+
 
 
 /* end project-detail */

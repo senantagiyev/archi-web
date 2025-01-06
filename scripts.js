@@ -103,56 +103,94 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(target);
 });
 
-window.addEventListener('scroll', function() {
-    var element = document.getElementById('service-main-block');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const welcomeText = document.getElementById("welcome-text");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    welcomeText.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.5, 
+        }
+    );
+
+    observer.observe(welcomeText);
 });
 
 
 // services animation
 
 
-window.addEventListener('scroll', function() {
-    var elements = document.querySelectorAll('.content, #service-main-block'); 
-    elements.forEach(function(element) {
-        var elementPosition = element.getBoundingClientRect().top;
-        var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const serviceBlock = document.getElementById("service-main-block");
 
-        if (elementPosition < screenPosition) {
-            element.classList.add('scroll-in-view');
-        }
-    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                serviceBlock.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(serviceBlock);
 });
+
 
 
 // work text animation
 
 
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('work-text');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const contentBlock = document.querySelector(".content");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                contentBlock.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(contentBlock);
 });
+
+
+//How we work animation
+
+document.addEventListener("DOMContentLoaded", () => {
+    const workText = document.getElementById("work-text");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                workText.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(workText);
+});
+
 
 
 // contact-form footer animation
 
-window.addEventListener('scroll', function () {
-    var element = document.getElementById('contact-form');
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contact-form");
 
-    if (elementPosition < screenPosition) {
-        element.classList.add('scroll-in-view');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                contactForm.classList.add("show");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(contactForm);
 });
 

@@ -579,16 +579,27 @@ body{
 }
 
 
-.section-header {
-    transform: translateX(100%); 
-    opacity: 0; 
-    transition: transform 1.4s ease, opacity 0.5s ease;
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.section-header.scroll-in-view {
-    transform: translateX(0); 
-    opacity: 1; 
+.section-header {
+    opacity: 0;
+    visibility: hidden;
 }
+
+.section-header.show {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    visibility: visible;
+}
+
 
 /* end projects */
 
